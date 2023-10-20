@@ -8,7 +8,7 @@ import java.util.HashSet;
 public class RedeSocial {
     
     private String name;
-    private Map<Integer, Usuario> usuarios = new HashMap<>();;
+    private Map<Integer, Usuario> usuarios = new HashMap<>();
     private int proxId;
 
     public RedeSocial(String name){
