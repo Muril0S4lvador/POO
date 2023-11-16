@@ -8,16 +8,20 @@ int main()
 {
     cout << "Iniciando main...\n";
 
-    Pessoa* murilo = new Pessoa("Murilo S. D.");
-    Pessoa* autor = new Pessoa("Machado de Assis");
+    Pessoa murilo("Murilo S. D.");
+    string nome = murilo.getNome();
+    cout << "Imprimindo nome\n";
+    cout << nome;
 
-    Livro* book = new Livro("O Cortiço", autor);
+    Pessoa autor("Machado de Assis");
 
-    Emprestimo* emp = new Emprestimo(book, murilo);
+    Livro book("O Cortiço", autor);
+
+    Emprestimo empEmprestimo(book, murilo);
 
 
     cout << "Nome: ";
-    cout << emp->getResponsavel()->getNome();
+    // cout << emp->getResponsavel()->getNome();
     // cout << "\nAutor: ";
     // cout << emp->getLivroEmprestado()->getAutor()->getNome();
     // cout << "\nTitulo: ";

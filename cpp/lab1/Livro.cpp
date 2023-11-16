@@ -1,9 +1,7 @@
 #include "Livro.h"
 
-Livro::Livro(const string &titulo, Pessoa *autor)
+Livro::Livro(const string &titulo, Pessoa &autor) : autor(&autor), titulo(titulo)
 {
-    this->autor = autor;
-    this->titulo = titulo;
 }
 
 string Livro::getTitulo() const
@@ -11,7 +9,7 @@ string Livro::getTitulo() const
     return this->titulo;
 }
 
-Pessoa* Livro::getAutor()
+Pessoa& Livro::getAutor() const
 {
-    return this->autor;
+    return *(this->autor);
 }

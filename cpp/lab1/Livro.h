@@ -13,9 +13,9 @@ class Livro{
 
 public:
     Livro() {}
-    Livro (const string &titulo, Pessoa *autor);
+    Livro (const string &titulo, Pessoa &autor);
     string getTitulo() const;
-    Pessoa *getAutor();
+    Pessoa& getAutor() const;
 
 };
 

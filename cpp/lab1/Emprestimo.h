@@ -11,9 +11,9 @@ class Emprestimo{
 
 public:
     Emprestimo() {}
-    Emprestimo(Livro *livro, Pessoa *reponsavel);
-    Livro *getLivroEmprestado();
-    Pessoa *getResponsavel();
+    Emprestimo(Livro &livro, Pessoa &reponsavel);
+    Livro& getLivroEmprestado();
+    Pessoa& getResponsavel();
 
 };
 

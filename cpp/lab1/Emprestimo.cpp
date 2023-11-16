@@ -1,17 +1,15 @@
 #include "Emprestimo.h"
 
-Emprestimo::Emprestimo(Livro *livro, Pessoa *reponsavel)
+Emprestimo::Emprestimo(Livro &livro, Pessoa &reponsavel) : livro(&livro), responsavel(&responsavel)
 {
-    this->livro = livro;
-    this->responsavel = responsavel;
 }
 
-Livro* Emprestimo::getLivroEmprestado()
+Livro& Emprestimo::getLivroEmprestado()
 {
-    return this->livro;
+    return *(this->livro);
 }
 
-Pessoa* Emprestimo::getResponsavel()
+Pessoa& Emprestimo::getResponsavel()
 {
-    return this->responsavel;
+    return *(this->responsavel);
 }
